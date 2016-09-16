@@ -24,7 +24,7 @@ namespace MvcPaging
             int pageCount = (int)Math.Ceiling(this.options.TotalItemCount / (double)this.options.PageSize);
             int nrOfPagesToDisplay = 10;
             var sb = new StringBuilder();
-            sb.AppendFormat("<div class=\"pagination pagination-{0} pagination-{1} {2}\"><ul>", options.Size.ToString(), options.Alignment.ToString(), options.CssClass);
+            sb.AppendFormat("<nav aria-label=\"Page navigation\"><ul class=\"pagination pagination-{0} pagination-{1} {2}\">", options.Size.ToString(), options.Alignment.ToString(), options.CssClass);
 
             #region First Button
             // First
@@ -37,9 +37,9 @@ namespace MvcPaging
                 else
                 {
                     if (string.IsNullOrWhiteSpace(options.ItemIcon.First))
-                        sb.AppendFormat("<li class=\"active first\"><span>{0}</span></li>", options.ItemTexts.First);
+                        sb.AppendFormat("<li class=\"disabled first\"><span>{0}</span></li>", options.ItemTexts.First);
                     else
-                        sb.AppendFormat("<li class=\"active first\"><span><i class=\"{1}\"></i> {0}</span></li>", options.ItemTexts.First, options.ItemIcon.First);
+                        sb.AppendFormat("<li class=\"disabled first\"><span><i class=\"{1}\"></i> {0}</span></li>", options.ItemTexts.First, options.ItemIcon.First);
                 }
             }
             #endregion
@@ -55,9 +55,9 @@ namespace MvcPaging
                 else
                 {
                     if (string.IsNullOrWhiteSpace(options.ItemIcon.Previous))
-                        sb.AppendFormat("<li class=\"active previous\"><span>{0}</span></li>", options.ItemTexts.Previous);
+                        sb.AppendFormat("<li class=\"disabled previous\"><span>{0}</span></li>", options.ItemTexts.Previous);
                     else
-                        sb.AppendFormat("<li class=\"active previous\"><span><i class=\"{1}\"></i> {0}</span></li>", options.ItemTexts.Previous, options.ItemIcon.Previous);
+                        sb.AppendFormat("<li class=\"disabled previous\"><span><i class=\"{1}\"></i> {0}</span></li>", options.ItemTexts.Previous, options.ItemIcon.Previous);
                 }
             }
             #endregion
@@ -140,9 +140,9 @@ namespace MvcPaging
                 else
                 {
                     if (string.IsNullOrWhiteSpace(options.ItemIcon.Next))
-                        sb.AppendFormat("<li class=\"active next\"><span>{0}</span></li>", options.ItemTexts.Next);
+                        sb.AppendFormat("<li class=\"disabled next\"><span>{0}</span></li>", options.ItemTexts.Next);
                     else
-                        sb.AppendFormat("<li class=\"active next\"><span>{0} <i class=\"{1}\"></i></span></li>", options.ItemTexts.Next, options.ItemIcon.Next);
+                        sb.AppendFormat("<li class=\"disabled next\"><span>{0} <i class=\"{1}\"></i></span></li>", options.ItemTexts.Next, options.ItemIcon.Next);
                 }
             }
             #endregion
@@ -158,14 +158,14 @@ namespace MvcPaging
                 else
                 {
                     if (string.IsNullOrWhiteSpace(options.ItemIcon.Last))
-                        sb.AppendFormat("<li class=\"active last\"><span>{0}</span></li>", options.ItemTexts.Last);
+                        sb.AppendFormat("<li class=\"disabled last\"><span>{0}</span></li>", options.ItemTexts.Last);
                     else
-                        sb.AppendFormat("<li class=\"active last\"><span>{0} <i class=\"{1}\"></i></span></li>", options.ItemTexts.Last, options.ItemIcon.Last);
+                        sb.AppendFormat("<li class=\"disabled last\"><span>{0} <i class=\"{1}\"></i></span></li>", options.ItemTexts.Last, options.ItemIcon.Last);
                 }
             }
             #endregion
 
-            sb.Append("</ul></div>");
+            sb.Append("</ul></nav>");
             return sb.ToString();
         }
 
