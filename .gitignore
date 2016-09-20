@@ -40,6 +40,7 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
+[Pp]ackages/
 
 # Build results
 
@@ -90,6 +91,7 @@ ipch/
 *.psess
 *.vsp
 *.vspx
+*.vs
 
 # Guidance Automation Toolkit
 *.gpState
