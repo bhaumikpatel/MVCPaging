@@ -28,7 +28,7 @@ namespace MvcPaging
             int pageCount = (int)Math.Ceiling(this.options.TotalItemCount / (double)this.options.PageSize);
             int nrOfPagesToDisplay = 10;
             var sb = new StringBuilder();
-            sb.AppendFormat("<div class=\"pagination pagination-{0} pagination-{1} {2}\"><ul>", options.Size.ToString(), options.Alignment.ToString(), options.CssClass);
+            sb.AppendFormat("<div class=\"pagination-container pagination-container-{0}\"><ul class=\"pagination pagination-{1} {2}\">", options.Alignment.ToString(), options.Size.ToString(), options.CssClass);
 
             #region First Button
             // First
