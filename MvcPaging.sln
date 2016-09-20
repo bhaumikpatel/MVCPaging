@@ -1,12 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPaging", "MvcPaging\MvcPaging.csproj", "{AF3CB9A6-EB6F-4E42-8326-E401E6796011}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPagingDemo", "..\MvcPagingDemo\MvcPagingDemo\MvcPagingDemo.csproj", "{F48383D4-6A82-46CB-9287-5A54DAF99486}"
-	ProjectSection(ProjectDependencies) = postProject
-		{AF3CB9A6-EB6F-4E42-8326-E401E6796011} = {AF3CB9A6-EB6F-4E42-8326-E401E6796011}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +15,6 @@ Global
 		{AF3CB9A6-EB6F-4E42-8326-E401E6796011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF3CB9A6-EB6F-4E42-8326-E401E6796011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF3CB9A6-EB6F-4E42-8326-E401E6796011}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F48383D4-6A82-46CB-9287-5A54DAF99486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F48383D4-6A82-46CB-9287-5A54DAF99486}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F48383D4-6A82-46CB-9287-5A54DAF99486}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F48383D4-6A82-46CB-9287-5A54DAF99486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
